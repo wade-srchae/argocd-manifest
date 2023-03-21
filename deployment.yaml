@@ -2,18 +2,28 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: test-deployment
+  namespace: default
 spec:
   selector:
     matchLabels:
-      app
-  replicas: 2 # tells deployment to run 2 pods matching the template
+      app: app
+  replicas: 2
+  revisionHistoryLimit: 1
   template:
     metadata:
       labels:
-        app
+        app: app
     spec:
       containers:
-      - name: test
-        image: ghcr.io/wade-srchae/app:dev.1234
-        ports:
-        - containerPort: 80
+        - name: test
+          image: ghcr.io/wade-srchae/app:dev.1234
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 500m
+              memory: 200Mi
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: dev
