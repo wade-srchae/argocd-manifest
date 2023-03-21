@@ -23,7 +23,7 @@ spec:
               cpu: 500m
               memory: 200Mi
           ports:
-            - containerPort: 8080
+            - containerPort: 9000
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: dev
