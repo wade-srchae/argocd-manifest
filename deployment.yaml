@@ -1,19 +1,19 @@
-apiVersion: app:20230321_1507s/v1
+apiVersion: app:20230321_151120230321_1507s/v1
 kind: Deployment
 metadata:
   name: test-deployment
 spec:
   selector:
     matchLabels:
-      app:20230321_1507 test
+      app:20230321_151120230321_1507 test
   replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app:20230321_1507 test
+        app:20230321_151120230321_1507 test
     spec:
       containers:
       - name: test
-        image: ghcr.io/wade-srchae/app:20230321_150720230321_1205
+        image: ghcr.io/wade-srchae/app:20230321_151120230321_150720230321_1205
         ports:
         - containerPort: 80
