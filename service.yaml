@@ -6,13 +6,13 @@ metadata:
   namespace: default
 spec:
   ports:
-    - port: 443
-      protocol: TCP
-      targetPort: 80
+    # - port: 443
+    #   protocol: TCP
+    #   targetPort: 80
 
-    # - port: 80 # 서비스가 사용할 포트
-    # targetPort: 8080 #서비스가 포워드할 컨테이너포트
-    # nodePort: 31212 # 서비스의 노드포트(적지않으면 30000~32768중 자동할당)
+    - port: 9000 # 서비스가 사용할 포트
+    targetPort: 9000 #서비스가 포워드할 컨테이너포트
+    nodePort: 31212 # 서비스의 노드포트(적지않으면 30000~32768중 자동할당)
   type: NodePort
 
   selector:
