@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: test
-          image: ghcr.io/wade-srchae/app:dev.20230322_0939
+          image: ghcr.io/wade-srchae/app:dev.20230322_1131
           imagePullPolicy: Always
           resources:
             requests:
