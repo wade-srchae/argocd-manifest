@@ -7,7 +7,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 9000 # 서비스가 사용할 포트
+    - port: 8080 # 서비스가 사용할 포트
       targetPort: 9000 #서비스가 포워드할 컨테이너포트
       NodePort: 32394
   selector:
