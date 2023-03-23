@@ -18,12 +18,5 @@ spec:
         - name: test
           image: ghcr.io/wade-srchae/app:dev.20230322_1155
           imagePullPolicy: Always
-          resources:
-            requests:
-              cpu: 500m
-              memory: 200Mi
           ports:
             - containerPort: 80
-          env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: dev
