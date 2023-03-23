@@ -8,7 +8,7 @@ spec:
   type: NodePort
   ports:
     - NodePort: 32394  # 외부에서 접속하기 위해 사용하는 포트
-      port: 8080       # Cluster 내부에서 사용할 Service 객체의 포트
+      port: 9000       # Cluster 내부에서 사용할 Service 객체의 포트
       targetPort: 80   # Service객체로 전달된 요청을 Pod(deployment)로 전달할때 사용하는 포트
   selector:
     app: app # app=MyHelloworld인 모든 pod는 이 서비스에 속한다.
