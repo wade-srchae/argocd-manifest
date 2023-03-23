@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: test
-          image: ghcr.io/wade-srchae/app:dev.20230322_1155
+          image: ghcr.io/wade-srchae/app:dev.20230323_1044
           imagePullPolicy: Always
           ports:
             - containerPort: 80
